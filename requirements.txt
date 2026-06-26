@@ -1,0 +1,42 @@
+# ─── Interfaz ────────────────────────────────────────────────────────────────
+customtkinter>=5.2.2
+Pillow>=10.0.0
+
+# ─── PyTorch ─────────────────────────────────────────────────────────────────
+# Se instala por separado en install.bat con --index-url para obtener CUDA.
+# Si prefieres CPU, install.bat hace fallback automatico.
+
+# ─── Whisper (transcripcion) ─────────────────────────────────────────────────
+openai-whisper>=20231117
+
+# ─── Piper TTS (sintesis para traduccion) ────────────────────────────────────
+piper-tts>=1.2.0
+
+# ─── Procesamiento de audio (pitch shift con librosa) ────────────────────────
+librosa>=0.10.0
+soundfile>=0.12.0
+numpy>=1.24
+
+# ─── HuBERT via transformers (reemplazo de fairseq) ──────────────────────────
+transformers>=4.40
+
+# ─── Traduccion offline ──────────────────────────────────────────────────────
+argostranslate>=1.9.1
+
+# ─── Dependencias de rvc-python (instaladas con --no-deps en install.bat) ────
+# rvc-python==0.1.5 pin-ea faiss-cpu==1.7.3 y fairseq (sin wheels en Python
+# 3.13). Aqui declaramos sus deps con versiones modernas que SI tienen wheels.
+# fairseq esta reemplazado por el monkey-patch en services/voice_service.py.
+av>=12.0
+faiss-cpu>=1.8
+fastapi>=0.110
+ffmpeg-python>=0.2.0
+loguru>=0.7
+omegaconf>=2.3
+praat-parselmouth>=0.4.4
+pydantic>=2.0
+python-multipart>=0.0.9
+pyworld>=0.3.4
+requests>=2.31
+torchcrepe>=0.0.23
+uvicorn>=0.27
